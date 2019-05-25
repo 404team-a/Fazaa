@@ -22,8 +22,8 @@ class SignUp extends Component {
 	
 	postSignUp() {
 		const body = {username: this.state.username, email: this.state.email, password: this.state.password};
-		localStorage.clear()
-    fetch('http://127.0.0.1:9876/signup', {
+		localStorage.clear();
+    fetch('/signup', {
       method: 'post',
       body: JSON.stringify(body),
       headers: {"Content-Type": "application/json"}

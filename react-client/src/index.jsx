@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
-// import { browserHistory} from "react-router";
+import { browserHistory} from "react-router";
 import { BrowserRouter  , Route, Switch  } from "react-router-dom"
 
 
@@ -12,6 +12,7 @@ import Login from './componants/Login';
 import {unregister} from './componants/Interceptor'
 import Map from "./componants/map";
 import Driver from "./componants/driver-page"
+// import Passenger from "./componants/passenger-page"
 import About from "./componants/about"
 import Passenger from "./componants/Passenger"
 
@@ -66,7 +67,6 @@ class App extends Component {
               <Route path="/about" component={About}/>
               <Route path="/driver" component={Driver} />
               <Route path="/passenger" component={Passenger} />
-
         </div>
       </div>
       

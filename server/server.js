@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 // const bodyParser = express.json();
 const {
   User,Trip
@@ -15,14 +15,13 @@ const app = express();
 
 app.use(express.static(__dirname + '/../react-client/dist'));
 
-
 app.listen(port, () => {
-  console.log(`Welcome to faza'a server port ==> ${port}`)
-})
+	console.log(`Welcome to faza'a server port ==> ${port}`);
+});
 
-app.use(express.json())
-app.use(bodyParser.json())
-app.use(cors())
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(cors());
 
 //middleware
 let authenticate = function (req, res, next) {
@@ -56,6 +55,7 @@ let authenticate = function (req, res, next) {
     })
   });
 };
+
 ////////API
 app.put("/driver", authenticate, (req, res) => {
   var username = req.body.user.username
